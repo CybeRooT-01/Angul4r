@@ -1,0 +1,9 @@
+button{
+  font-weight: normal;
+}
+input,textarea{
+  outline: 1px solid white;
+}
+input:focus, textarea:focus{
+  outline: 1px solid white;
+}

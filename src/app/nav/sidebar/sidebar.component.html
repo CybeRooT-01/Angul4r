@@ -1,0 +1,35 @@
+<mat-drawer-container class="example-container ">
+  <mat-drawer mode="side" opened="{{toggleSide}}" >
+    <mat-list >
+      <div mat-subheader>Dashboard</div>
+      <mat-list-item >
+        <mat-list role="list" >
+          <mat-list-item role="list-item" class="my-4 Fakelinks" routerLinkActive="Active" routerLink ="/home">
+            <mat-icon >home</mat-icon>
+            <div mat-line> Acceuil </div>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="my-4 Fakelinks" routerLinkActive="Active" routerLink ="/categories">
+            <mat-icon>view_comfy</mat-icon>
+            <div mat-line> Categories</div>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="my-4 Fakelinks" routerLinkActive="Active"  routerLink ="/produits">
+            <mat-icon>shopping_cart</mat-icon>
+            <div mat-line> Produits </div>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="my-4 Fakelinks" routerLinkActive="Active" routerLink ="/contact">
+            <mat-icon> local_phone</mat-icon>
+            <div mat-line> Contact </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="content">
+      <app-toolbar (click) = "toggleToolbar()"></app-toolbar>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
